@@ -767,8 +767,8 @@ body.mode-preview .edit-toggle { display: none !important; }
 .case-band p { font: 400 26px/1.3 var(--font-sans); }
 
 /* Exemplos de valores */
-.price-grid { display: grid; grid-template-columns: 1fr 1fr 1.16fr; gap: 20px; margin-top: 36px; }
-.price-card { background: var(--white); border: 1px solid var(--grey-2); border-top: 4px solid var(--teal); padding: 36px 36px 28px; }
+.price-grid { display: grid; grid-template-columns: 1fr 1fr 1.16fr; gap: 20px; margin-top: 30px; }
+.price-card { background: var(--white); border: 1px solid var(--grey-2); border-top: 4px solid var(--teal); padding: 28px 36px 14px; position: relative; }
 .price-card.main { background: var(--navy); border-color: var(--navy); border-top-color: var(--teal); color: var(--cream); }
 .price-top { display: flex; align-items: flex-end; gap: 16px; }
 .price-users { font: 200 104px/0.86 var(--font-sans); letter-spacing: -0.05em; color: var(--teal-ink); }
@@ -776,21 +776,24 @@ body.mode-preview .edit-toggle { display: none !important; }
 .price-unit { font: 500 26px/1.15 var(--font-sans); }
 .price-unit small { display: block; margin-top: 6px; font: 400 18px/1.2 var(--font-sans); color: var(--grey-3); }
 .price-card.main .price-unit small { color: var(--on-dark); }
-.price-val { margin-top: 38px; font: 300 66px/1 var(--font-sans); letter-spacing: -0.03em; }
+.price-val { margin-top: 26px; font: 300 66px/1 var(--font-sans); letter-spacing: -0.03em; }
 .price-val small { margin-left: 12px; font: 400 21px/1 var(--font-sans); letter-spacing: 0; color: var(--grey-3); }
 .price-card.main .price-val small { color: var(--on-dark); }
-.price-rows { margin-top: 30px; }
-.price-rows div { display: flex; justify-content: space-between; padding: 16px 0; border-top: 1px solid var(--grey-1); font: 400 25px/1.2 var(--font-sans); color: var(--ink-2); }
+.price-rows { margin-top: 20px; }
+.price-rows div { display: flex; justify-content: space-between; padding: 13px 0; border-top: 1px solid var(--grey-1); font: 400 25px/1.2 var(--font-sans); color: var(--ink-2); }
 .price-card.main .price-rows div { border-top-color: var(--hair-dark); color: var(--on-dark); }
 .price-rows dd { font-weight: 500; color: var(--ink); }
 .price-card.main .price-rows dd { color: var(--cream); }
+.price-card.main .price-rows .per dd { font-size: 32px; line-height: 1; color: var(--teal); }
+.price-badge { position: absolute; top: 28px; right: 36px; padding: 9px 12px; background: var(--teal); color: var(--navy); font: 500 14px/1 var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; }
 .price-notes { margin-top: auto; display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 40px; }
 .price-notes p { font: 400 22px/1.38 var(--font-sans); color: var(--ink-2); }
 .price-notes b { display: block; margin-bottom: 8px; font: 500 15px/1 var(--font-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal-ink); }
 
-/* Condição de 24 horas */
-.offer-grid { display: grid; grid-template-columns: 1000px 1fr; gap: 72px; margin-top: 40px; }
-.offer-row { display: grid; grid-template-columns: 1fr 210px 270px; align-items: baseline; padding: 20px 0; border-top: 1px solid var(--hair-dark); font: 400 29px/1.15 var(--font-sans); color: var(--on-dark); }
+/* Condição de fechamento */
+.offer-sub { margin-top: 20px; font: 300 40px/1.15 var(--font-sans); letter-spacing: -0.02em; color: var(--cream); }
+.offer-grid { display: grid; grid-template-columns: 1000px 1fr; gap: 72px; margin-top: 44px; }
+.offer-row { display: grid; grid-template-columns: 1fr 240px 290px; align-items: baseline; padding: 20px 0; border-top: 1px solid var(--hair-dark); font: 400 29px/1.15 var(--font-sans); color: var(--on-dark); }
 .offer-row.head { padding: 0 0 13px; border-top: 0; font: 500 15px/1 var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--on-dark-2); }
 .offer-row s { text-decoration-color: var(--on-dark-2); }
 .offer-row b { font: 400 38px/1 var(--font-sans); letter-spacing: -0.02em; color: var(--cream); }
@@ -1255,22 +1258,25 @@ body.mode-preview .edit-toggle { display: none !important; }
         <div class="price-top"><span class="price-users">15</span><span class="price-unit">usuários<small>Gestão e administrativo</small></span></div>
         <div class="price-val">R$ 1.179<small>por mês</small></div>
         <dl class="price-rows">
-          <div><dt>Setup</dt><dd>R$ 1.500</dd></div>
-          <div><dt>Primeiro ano</dt><dd>R$ 15.648</dd></div>
+          <div class="per"><dt>Por pessoa, por mês</dt><dd>R$ 78,60</dd></div>
+          <div><dt>Setup</dt><dd>R$ 1.800</dd></div>
+          <div><dt>Primeiro ano</dt><dd>R$ 15.948</dd></div>
         </dl>
       </div><div class="price-card reveal" style="--d:0.3s">
-        <div class="price-top"><span class="price-users">25</span><span class="price-unit">usuários<small>Gestão e coordenações</small></span></div>
-        <div class="price-val">R$ 1.419<small>por mês</small></div>
+        <div class="price-top"><span class="price-users">30</span><span class="price-unit">usuários<small>Gestão e coordenações</small></span></div>
+        <div class="price-val">R$ 1.519<small>por mês</small></div>
         <dl class="price-rows">
-          <div><dt>Setup</dt><dd>R$ 1.500</dd></div>
-          <div><dt>Primeiro ano</dt><dd>R$ 18.528</dd></div>
+          <div class="per"><dt>Por pessoa, por mês</dt><dd>R$ 50,63</dd></div>
+          <div><dt>Setup</dt><dd>R$ 2.700</dd></div>
+          <div><dt>Primeiro ano</dt><dd>R$ 20.928</dd></div>
         </dl>
       </div><div class="price-card main reveal" style="--d:0.4s">
-        <div class="price-top"><span class="price-users">40</span><span class="price-unit">usuários<small>Toda a equipe</small></span></div>
-        <div class="price-val">R$ 1.699<small>por mês</small></div>
+        <span class="price-badge">Recomendado para o IRS</span><div class="price-top"><span class="price-users">50</span><span class="price-unit">usuários<small>Toda a equipe</small></span></div>
+        <div class="price-val">R$ 1.899<small>por mês</small></div>
         <dl class="price-rows">
-          <div><dt>Setup</dt><dd>R$ 2.000</dd></div>
-          <div><dt>Primeiro ano</dt><dd>R$ 22.388</dd></div>
+          <div class="per"><dt>Por pessoa, por mês</dt><dd>R$ 37,98</dd></div>
+          <div><dt>Setup</dt><dd>R$ 3.750</dd></div>
+          <div><dt>Primeiro ano</dt><dd>R$ 26.538</dd></div>
         </dl>
       </div>
     </div>
@@ -1286,32 +1292,33 @@ body.mode-preview .edit-toggle { display: none !important; }
   </div>
 </section>
 
-<section class="slide dark offer" data-slide-id="oferta" data-label="Condição de 24 horas">
+<section class="slide dark offer" data-slide-id="oferta" data-label="Condição até sexta">
   <div class="dots" style="right:0;top:110px;width:460px;height:380px;-webkit-mask-image:linear-gradient(225deg,#000,transparent 75%);mask-image:linear-gradient(225deg,#000,transparent 75%);opacity:.7"></div>
-  <div class="chrome-top"><span>NODO GRC × IRS</span><span class="sec">Condição de 24 horas</span></div>
+  <div class="chrome-top"><span>NODO GRC × IRS</span><span class="sec">Condição de fechamento</span></div>
   <div class="content">
-    <p class="kicker reveal">Oferta de 24 horas · até quarta, 04/11, às 11h</p>
-    <h2 class="close-title reveal" style="--d:.08s;font-size:80px">Decidindo até quarta, o IRS <em>economiza R$ 5.058</em> no primeiro ano</h2>
+    <p class="kicker reveal">Condição de fechamento · até sexta, 06/11, às 18h</p>
+    <h2 class="close-title reveal" style="--d:.08s;font-size:80px">Decidindo até sexta, o IRS <em>usa 12 meses e paga 10</em></h2>
+    <p class="offer-sub reveal" style="--d:.16s">Economia de R$ 7.548 no primeiro ano, com o setup isento</p>
     <div class="offer-grid">
       <div class="offer-left reveal" style="--d:.22s">
-        <div class="offer-row head"><span>Exemplo com 40 usuários</span><span>Sem a condição</span><span>Até quarta, 11h</span></div>
-        <div class="offer-row"><span>Mensalidade</span><s>R$ 1.699</s><b>R$ 1.444,15</b></div>
-        <div class="offer-row"><span>Setup</span><s>R$ 2.000</s><b>Isento</b></div>
-        <div class="offer-row total"><span>Primeiro ano</span><s>R$ 22.388</s><b>R$ 17.329,80</b></div>
-        <p class="offer-note">Setup isento e 15% na mensalidade durante os 12 meses do contrato, em qualquer plano: R$ 3.622 a menos com 15 usuários e R$ 4.054 com 25. Na renovação, vale o valor padrão.</p>
+        <div class="offer-row head"><span>Exemplo com 50 usuários</span><span>Sem a condição</span><span>Até sexta, 18h</span></div>
+        <div class="offer-row"><span>Mensalidades</span><s>12 × R$ 1.899</s><b>10 × R$ 1.899</b></div>
+        <div class="offer-row"><span>Setup</span><s>R$ 3.750</s><b>Isento</b></div>
+        <div class="offer-row total"><span>Primeiro ano</span><s>R$ 26.538</s><b>R$ 18.990</b></div>
+        <p class="offer-note">Vale nos três planos: R$ 4.158 a menos com 15 usuários e R$ 5.738 com 30. Pagamento à vista ou em 3x. Condição válida para os 12 primeiros meses; a partir do 2º ano, a mensalidade é a do plano (R$ 1.899 no de 50).</p>
       </div>
       <div class="offer-right reveal" style="--d:.34s">
-        <span class="tag-mono">Por que 24 horas</span>
+        <span class="tag-mono">Por que até sexta</span>
         <p class="offer-why">Decidir agora evita semanas de proposta e negociação, e essa economia vai para vocês. Começando em novembro, o IRS chega a 2027 com tudo organizado.</p>
         <span class="tag-mono">Como garantir</span>
         <ol class="offer-steps">
-          <li><i>01</i>De acordo por e-mail, de quem possa autorizar, até quarta às 11h</li>
+          <li><i>01</i>De acordo por e-mail, de quem possa autorizar, até sexta às 18h</li>
           <li><i>02</i>Contrato assinado em até 10 dias úteis, depois da revisão de vocês</li>
         </ol>
       </div>
     </div>
     <div class="close-bottom reveal" style="--d:.48s">
-      <p class="close-cta serif">Depois de quarta às 11h, são R$ 5.058 a mais no primeiro ano.</p>
+      <p class="close-cta serif">Depois de sexta às 18h, são R$ 7.548 a mais no primeiro ano.</p>
       <div class="contact">
         <span><b>Cristiano Vieira</b> · Diretor Comercial</span>
         <span>cristiano.vieira@nodogrc.com.br · (51) 99699-5281</span>
@@ -1561,28 +1568,32 @@ const SPEAKER_NOTES = [
     transition: 'Agora, os valores.'
   },
   {
-    id: 'precos', title: 'Exemplos de valores', section: 'Fechamento', minutes: 3,
-    purpose: 'Dar a referência de preço e ancorar no exemplo que combina com o IRS.',
+    id: 'precos', title: 'Três planos', section: 'Fechamento', minutes: 3,
+    purpose: 'Dar a referência de preço e recomendar o plano de 50 usuários.',
     talk: [
       '"Prometi a conta. O valor acompanha quantas pessoas têm login, e todas as funções estão em todos os planos."',
-      'Passar pelos três exemplos. Se disseram um número de pessoas, parar no exemplo mais próximo.',
-      '"O site lista cerca de 40 pessoas. Faz sentido todo mundo com acesso, ou começaria com um grupo menor?"',
+      '"Aqui estão três caminhos. O de 15 e o de 30 funcionam se o acesso ficar com um grupo menor."',
+      '"Para o IRS, eu recomendo o de 50: o site de vocês lista 39 pessoas, então cabe toda a equipe e ainda sobra espaço para crescer."',
       'Especialista da NODO junto às áreas: é opcional, à parte, com valor combinado depois.',
       'Silêncio depois do valor. Deixar a pessoa reagir antes de mostrar a condição.'
     ],
+    fallback: 'Se pedirem outro número, perguntar antes: "Quantas pessoas vocês imaginam, e quem ficaria de fora?" Valores: 10 usuários R$ 1.059 + setup R$ 1.350 · 20 R$ 1.299 + R$ 2.100 · 25 R$ 1.419 + R$ 2.400 · 40 R$ 1.709 + R$ 3.250. Com 40: "Por R$ 190 a mais por mês, entram mais 10 pessoas."',
     transition: '"E para quem decide rápido, tenho uma condição."'
   },
   {
-    id: 'oferta', title: 'Condição de 24 horas', section: 'Fechamento', minutes: 4,
-    purpose: 'Apresentar a condição real de 24 horas e sair com o caminho do de acordo definido.',
+    id: 'oferta', title: 'Condição até sexta', section: 'Fechamento', minutes: 4,
+    purpose: 'Apresentar a condição real até sexta e sair com o caminho do de acordo definido.',
     talk: [
       'Voltar à frase deles: "No começo vocês disseram [frase deles]. O que vimos resolve isso?" Só depois, a condição.',
-      '"Se o IRS der o de acordo até amanhã às 11h, o setup fica isento e a mensalidade cai 15% durante os 12 meses do contrato."',
+      '"Se decidirem até sexta, vocês usam 12 meses, pagam 10, e o setup fica isento. No plano de 50, são R$ 18.990 no primeiro ano, ou seja, menos de R$ 32 por pessoa, por mês."',
       'Motivo, sem exagero: "Decidir agora evita semanas de proposta e negociação, e essa economia vai para vocês. Começando em novembro, o IRS chega a 2027 com tudo organizado."',
-      '"Quem do IRS pode dar esse de acordo? Consigo falar com essa pessoa ainda hoje?"',
+      '"Quem do IRS assina esse de acordo?" Fazer a pergunta e ficar em silêncio.',
+      '"Vocês preferem à vista ou em 3x?"',
+      'Se surgir "vamos pensar": "O que falta decidir, e quem precisa ver isso?" Marcar dia e hora antes de sexta.',
       'Se o Conselho precisar aprovar: o de acordo reserva a condição, e a revisão acontece nos 10 dias úteis do contrato.',
       'Se não der: agradecer, sem insistir. A condição acaba mesmo no prazo.'
     ],
+    fallback: 'Só se a forma de pagamento for mesmo o obstáculo: 12x de R$ 1.582,50 no plano de 50.',
     cue: 'Este é o último slide. Ele fica na tela até o fim da reunião.',
     delivery: 'Firme e tranquilo. A condição é um convite: nada de pressão ou de contagem regressiva.',
     transition: 'Encerrar repetindo o combinado: quem dá o de acordo, por qual e-mail e até quando.'
